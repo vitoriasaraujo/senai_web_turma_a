@@ -72,10 +72,8 @@ header {
         text-decoration: line-through;
     }
 
-    section {
+    .regua {
         background-image: url(../img/divider-dark.png);
-        width: 100%;
-        height: 500px;
         background-repeat: repeat-x;
         padding-top: 100px;
     }
@@ -111,28 +109,58 @@ header {
         margin-left: 95px;
         margin-top: 40px;
     }
-    .header h4{
+    .trabalhos{
+        margin-top: 110px;
+    }
+    .header{
+        min-width: 1200px;
+        max-width: 1400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .trabalhos .header h4 span{
+        font-style: italic;
         color: #e7a920;
         text-transform: uppercase;
         letter-spacing: 11px;
         font-weight: 300;
         font-size: 24px;
         font-family: 'Montserrat', sans-serif;
-        font-style: italic;
-        text-align: center;
-        margin:0;
     }
 
-    .header h1{
+    .trabalhos .header h4 b{
         font-weight: 700;
         font-family: 'Montserrat', sans-serif;
         font-size: 85px;
         text-transform: uppercase;
         color: #000;
-        text-align: center;
         font-style: italic;
-        margin:0;
     }
+    .trabalhos .header p{
+         font-family:'Montserrat', sans-serif;
+         font-size: 20px;
+         margin: 12px 0 0 0;
+         display: inline-block;
+    }
+
+    .trabalhos .mosaico{
+        min-width: 1200px;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .trabalhos .mosaico .item {
+         height: 470px;
+         width: 570px;
+         background-image: url(../img/project-1.jpg);
+         background-size: contain;   
+    } 
+    .trabalhos .mosaico .item:hover{
+        background-size: 110%;
+        background-position: center;
+    }
+
     
     /*--------------------------trabalhos-----------------------------*/
     
