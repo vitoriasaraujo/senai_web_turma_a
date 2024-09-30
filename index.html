@@ -1,32 +1,44 @@
-<!DOCTYPE html> 
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>PND - PARTIDO NOVA DIREÇÃO</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Alunos</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <div id="logo">
-                <img src="logo.png">
-            </div>
-            <h1>Partido Nova Direção</h1>
-            <a href="a" class="button">Sobre</a>
-        </nav>
-    </header>
-    <div class="icons">
-        <div class="icon">
-            <img src="vitoriavereadora.jpg">
-        </div>
+    <div class="container">
+        <h1>Cadastro de Alunos</h1>
+        
+        <?php
+        // Exibindo mensagens de sucesso ou erro
+        if (isset($_GET['msg'])) {
+            if ($_GET['msg'] == 'sucesso') {
+                echo "<div class='success'>Cadastro realizado com sucesso!</div>";
+            }
+        }
+        ?>
+
+        <form action="cadastro.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="curso">Curso:</label>
+            <input type="text" id="curso" name="curso" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <h2>Lista de Alunos</h2>
+
+        <input type="text" id="pesquisa" placeholder="Pesquisar...">
+
     </div>
-    <div class="txt">
-        <h6>
-            “É hora de renovar a política! Com o PND, trazemos novas ideias, energia e compromisso para transformar nossa cidade. Juntos, vamos construir um futuro mais justo e próspero para todos!”
-        </h6>
-    </div>
-    <footer>
-        <p>Vitória Araújo</p>
-    </footer>
 </body>
 </html>
